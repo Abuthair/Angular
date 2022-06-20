@@ -1,0 +1,13 @@
+#Layer_1 {
+  height: 40px;
+  width: 40px;
+}
+.example-spacer {
+  flex: 1 1 auto;
+}
+button {
+  margin: 25px;
+}
+.signup {
+  border-radius: 8px;
+}
