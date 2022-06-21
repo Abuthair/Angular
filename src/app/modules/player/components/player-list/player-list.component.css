@@ -12,6 +12,10 @@ body:after {
   right: 20px;
   z-index: 2;
 }
+.sidenav-container{
+  width: 200px;
+  
+}
 .wrapper {
   position: relative;
   display: flex;
@@ -140,6 +144,11 @@ body:after {
   display: flex;
   justify-content: center;
 }
+.card {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .fut-player-card
   .player-card-bottom
   .player-info
@@ -167,7 +176,7 @@ body:after {
   .player-feature-value {
   margin-right: 0.3rem;
   font-weight: 700;
-  color:rgb(192, 231, 114)
+  color: rgb(192, 231, 114);
 }
 .fut-player-card
   .player-card-bottom

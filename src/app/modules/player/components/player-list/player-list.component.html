@@ -1,34 +1,142 @@
-<!-- <mat-card *ngFor="let player of players">
-  <mat-card-header>
-    <img mat-card-md-image src="{{ player.playerImg }}" />
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <button mat-icon-button>
+      <mat-icon (click)="sidenav.toggle()">menu</mat-icon>
+    </button>
+    <h1>Player-List</h1>
+  </mat-toolbar-row>
+</mat-toolbar>
+<mat-sidenav-container>
+  <mat-sidenav #sidenav opened="true" mode="side" class="sidenav-container">
+    <mat-nav-list>
+      <mat-list-item
+        (click)="getPLayerType(type)"
+        *ngFor="let type of distinctTypes"
+      >
+        {{ type }}
+      </mat-list-item>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <router-outlet></router-outlet>
 
-    <mat-card-title>{{ player.playerName }}</mat-card-title>
-    <mat-card-subtitle>{{ player.age }}</mat-card-subtitle>
-  </mat-card-header>
-  <mat-card-content>
-    {{ player.basePrice | currency: "Rs " }}<br />
-    Description:{{ player.playerDescription}}<br />
-  </mat-card-content>
-</mat-card> -->
-<ng-container *ngFor="let player of players">
-  <button class="wrapper" (click)="showDetails(player.playerId)">
-    <!-- *** fut-player-card ***-->
-    <div class="fut-player-card">
-      <!-- Player Card Top-->
-      <div class="player-card-top">
-        <div class="player-picture">
-          <img src="{{ player.playerImg }}" draggable="false" />
-        </div>
-      </div>
-      <!-- Player Card Bottom-->
-      <div class="player-card-bottom">
-        <div class="player-info">
-          <!-- Player Name-->
-          <div class="player-name">
-            <span> {{ player.playerName }}</span>
+    <ng-container *ngFor="let player of players">
+      <button class="wrapper card" (click)="showDetails(player.playerId)">
+        <!-- *** fut-player-card ***-->
+        <div class="fut-player-card">
+          <!-- Player Card Top-->
+          <div class="player-card-top">
+            <div class="player-picture">
+              <img src="{{ player.playerImg }}" draggable="false" />
+            </div>
           </div>
-          <!-- Player Features-->
-          <div class="player-features">
+          <!-- Player Card Bottom-->
+          <div class="player-card-bottom">
+            <div class="player-info">
+              <!-- Player Name-->
+              <div class="player-name">
+                <span> {{ player.playerName }}</span>
+              </div>
+              <!-- Player Features-->
+              <div class="player-features">
+                <div class="player-features-col">
+                  <span>
+                    <div class="player-feature-title">Price:</div>
+                    <div class="player-feature-value">
+                      {{ player.basePrice | currency }}
+                    </div>
+                  </span>
+                  <span>
+                    <div class="player-feature-title">Batting:</div>
+                    <div class="player-feature-value">
+                      {{ player.batting }}
+                    </div>
+                  </span>
+                  <span>
+                    <div class="player-feature-title">Bowling:</div>
+                    <div class="player-feature-value">
+                      {{ player.bowling }}
+                    </div>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </button>
+    </ng-container>
+    <div class="playerList">
+      <ng-container *ngFor="let player of playerType">
+        <button class="wrapper card" (click)="showDetails(player.playerId)">
+          -->
+          <!-- *** fut-player-card ***-->
+          <div class="fut-player-card">
+            <!-- Player Card Top-->
+            <div class="player-card-top">
+              <div class="player-picture">
+                <img src="{{ player.playerImg }}" draggable="false" />
+              </div>
+            </div>
+            <!-- Player Card Bottom-->
+            <div class="player-card-bottom">
+              <div class="player-info">
+                <!-- Player Name-->
+                <div class="player-name">
+                  <span> {{ player.playerName }}</span>
+                </div>
+                <!-- Player Features-->
+                <div class="player-features">
+                  <div class="player-features-col">
+                    <span>
+                      <div class="player-feature-title">Price:</div>
+                      <div class="player-feature-value">
+                        {{ player.basePrice | currency }}
+                      </div>
+                    </span>
+                    <span>
+                      <div class="player-feature-title">Batting:</div>
+                      <div class="player-feature-value">
+                        {{ player.batting }}
+                      </div>
+                    </span>
+                    <span>
+                      <div class="player-feature-title">Bowling:</div>
+                      <div class="player-feature-value">
+                        {{ player.bowling }}
+                      </div>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </button>
+      </ng-container>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+<!-- <ng-container *ngFor="let player of players">
+  <button class="wrapper" (click)="showDetails(player.playerId)"> -->
+<!-- *** fut-player-card ***-->
+<!-- <div class="fut-player-card"> -->
+-->
+<!-- Player Card Top-->
+<!-- 
+      <div class="player-card-top">
+        <div class="player-picture"> -->
+<!-- <img src="{{ player.playerImg }}" draggable="false" />
+        </div>
+      </div> -->
+<!-- Player Card Bottom-->
+<!-- <div class="player-card-bottom">
+        <div class="player-info"> -->
+<!-- Player Name -->
+<!-- <div class="player-name">
+            <span> {{ player.playerName }}</span>
+          </div> -->
+<!-- Player Features -->
+<!-- <div class="player-features">
             <div class="player-features-col">
               <span>
                 <div class="player-feature-title">Price:</div>
@@ -50,4 +158,4 @@
       </div>
     </div>
   </button>
-</ng-container>
+</ng-container> -->

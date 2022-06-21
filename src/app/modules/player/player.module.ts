@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { PlayerDetailsComponent } from './components/player-details/player-details.component';
 import { PlayerListComponent } from './components/player-list/player-list.component';
 import { MaterialModule } from '../shared/material/material.module';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -13,7 +14,8 @@ import { MaterialModule } from '../shared/material/material.module';
   ],
   imports: [
     CommonModule,
-    MaterialModule
+    MaterialModule,
+    RouterModule
   ],
   exports:[PlayerListComponent, PlayerDetailsComponent]
 })

@@ -1,1 +1,75 @@
-{{player| json}}
+<!-- {{player| json}} -->
+<div class="grid-container">
+  <div class="grid-item">
+    <div class="fut-player-card">
+      <!-- Player Card Top-->
+      <div class="player-card-top">
+        <div class="player-picture">
+          <img src="{{ player.playerImg }}" draggable="false" />
+        </div>
+      </div>
+      <!-- Player Card Bottom-->
+      <div class="player-card-bottom">
+        <div class="player-info">
+          <!-- Player Name-->
+          <div class="player-name">
+            <span> {{ player.playerName }}</span>
+          </div>
+          <!-- Player Features-->
+          <div class="player-features">
+            <div class="player-features-col">
+              <span>
+                <div class="player-feature-title">Price:</div>
+                <div class="player-feature-value">
+                  {{ player.basePrice | currency }}
+                </div>
+              </span>
+              <span>
+                <div class="player-feature-title">Batting:</div>
+                <div class="player-feature-value">
+                  {{ player.batting }}
+                </div>
+              </span>
+              <span>
+                <div class="player-feature-title">Bowling:</div>
+                <div class="player-feature-value">
+                  {{ player.bowling }}
+                </div>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="grid-item">
+    <div class="player-detail-title">Name:</div>
+    <div class="player-detail-value">
+      {{ player.playerName }}
+    </div>
+    <div class="player-detail-title">Age:</div>
+    <div class="player-detail-value">
+      {{ player.age }}
+    </div>
+    <div class="player-detail-title">Country:</div>
+    <div class="player-detail-value">
+      {{ player.country }}
+    </div>
+    <div class="player-detail-title">Batting:</div>
+    <div class="player-detail-value">
+      {{ player.batting }}
+    </div>
+    <div class="player-detail-title">Bowling:</div>
+    <div class="player-detail-value">
+      {{ player.bowling }}
+    </div>
+    <div class="player-detail-title">Specialist:</div>
+    <div class="player-detail-value">
+      {{ player.specialist }}
+    </div>
+    <div class="player-detail-title">playerDescription:</div>
+    <div class="player-detail-value">
+      {{ player.playerDescription }}
+    </div>
+  </div>
+</div>

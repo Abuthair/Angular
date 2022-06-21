@@ -13,21 +13,32 @@ export class PlayerListComponent implements OnInit {
   playerId!: number;
   player!: Player;
   players: Player[] = [];
-  constructor(
- 
-    private _playerService: PlayerService,
-    private _router: Router
-  ) {}
-  // specialist: string = '';
-  // typesViews: TypeView[] = [];
+  playerType: Player[] = [];
+  distinctTypes: string[] = [];
+  constructor(private _playerService: PlayerService, private _router: Router) {}
+
   ngOnInit(): void {
     this._playerService.getPlayers().subscribe({
       next: (data) => {
         this.players = data;
         console.log(this.players);
+
+        this._playerService.getByDistinctPlayerType().subscribe({
+          next: (data) => (this.distinctTypes = data),
+        });
       },
     });
   }
+
+  getPLayerType = (type: string) => {
+    this.players = [];
+    this._router.navigate(['/player-list', type]);
+    this._playerService.getPLayerType(type).subscribe({
+      next: (data) => {
+        this.playerType = data;
+      },
+    });
+  };
 
   showDetails = (playerId: number) => {
     this._router.navigate(['player-details/', playerId]);

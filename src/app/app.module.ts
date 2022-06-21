@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './components/home/home.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
-import { ServiceComponent } from './components/service/service.component';
 import { AboutComponent } from './components/about/about.component';
 import { ContactusComponent } from './components/contactus/contactus.component';
 import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.component';
@@ -21,7 +20,6 @@ import { FormsModule } from '@angular/forms';
     AppComponent,
     HomeComponent,
     NavBarComponent,
-    ServiceComponent,
     AboutComponent,
     ContactusComponent,
     PagenotfoundComponent,
