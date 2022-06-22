@@ -27,4 +27,5 @@ export class PlayerService {
     let url = `${this._baseurl}/distinct/`;
     return this._httpClient.get<string[]>(url);
   };
+  
 }

@@ -71,5 +71,10 @@
     <div class="player-detail-value">
       {{ player.playerDescription }}
     </div>
+    <button mat-raised-button [routerLink]="['/signing',player.playerId]" color="primary">
+      Signing
+    </button>
   </div>
 </div>
+
+

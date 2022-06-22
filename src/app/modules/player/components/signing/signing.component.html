@@ -1,0 +1,23 @@
+<div class="form-group">
+  <form [formGroup]="addForm" (ngSubmit)="addSigning(addForm)">
+    <p>
+      <mat-form-field appearance="outline">
+        <mat-label>Enter Team Id</mat-label>
+        <input matInput placeholder="teamId" formControlName="teamId" />
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field appearance="outline">
+        <mat-label>Enter Price</mat-label>
+        <input matInput placeholder="Price" formControlName="price" />
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field appearance="outline">
+        <mat-label>Season</mat-label>
+        <input matInput placeholder="season" formControlName="season" />
+      </mat-form-field>
+    </p>
+    <button mat-raised-button color="primary">Sign</button>
+  </form>
+</div>

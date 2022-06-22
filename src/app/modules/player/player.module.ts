@@ -4,18 +4,22 @@ import { PlayerDetailsComponent } from './components/player-details/player-detai
 import { PlayerListComponent } from './components/player-list/player-list.component';
 import { MaterialModule } from '../shared/material/material.module';
 import { RouterModule } from '@angular/router';
+import { SigningComponent } from './components/signing/signing.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
 @NgModule({
   declarations: [
     PlayerDetailsComponent,
-    PlayerListComponent
+    PlayerListComponent,
+    SigningComponent
   ],
   imports: [
     CommonModule,
     MaterialModule,
-    RouterModule
+    ReactiveFormsModule,
+    RouterModule,
   ],
   exports:[PlayerListComponent, PlayerDetailsComponent]
 })

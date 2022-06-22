@@ -13,7 +13,7 @@ import { MaterialModule } from './modules/shared/material/material.module';
 import { AuthModule } from './modules/auth/auth.module';
 import { PlayerModule } from './modules/player/player.module';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -32,6 +32,7 @@ import { FormsModule } from '@angular/forms';
     PlayerModule,
     AuthModule,
     MaterialModule,
+    ReactiveFormsModule,
     AppRoutingModule,
   ],
   providers: [],

@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.hero {
+  position: relative;
+  width: auto;
+  height: auto;
+  background-color: antiquewhite;
+}
+
+.detail {
+  margin-left: 8%;
+  margin-top: 13%;
+}
+.detail h1 {
+  font-size: 20px;
+  font-family: "Ceviche One", cursive;
+  font-family: "Lavishly Yours", cursive;
+  color: black;
+  margin-bottom: 20px;
+}
+span {
+  color: red;
+  font-family: "Ceviche One", cursive;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 30px;
+}
+.grid-item {
+  font-size: 30px;
+  text-align: center;
+}
+.kohli {
+  width: 99%;
+  height: 99%;
+  display: flex;
+  align-content: center;
+  padding-left: 40px;
+}
+#soft {
+  font-family: "Lavishly Yours", cursive;
+  color: blue;
+  font-size: 18px;
+  padding-top: 30px;
+  display: flex;
+}
+.image {
+  height: 20px;
+  width: 20px;
+}

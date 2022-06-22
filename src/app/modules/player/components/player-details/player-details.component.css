@@ -202,6 +202,7 @@ body:after {
   margin-right: 0.3rem;
   color: rgb(240, 50, 17);
   font-size: 1.4rem;
+  padding: 12px;
 }
 .player-detail-title {
   font-size: 1.4rem;
@@ -212,11 +213,12 @@ body:after {
 .grid-container {
   display: grid;
   grid-template-columns: auto auto auto;
+
   padding: 10px;
+  box-shadow: inset;
 }
 .grid-item {
   background-color: rgba(255, 255, 255, 0.8);
-  padding: 20px;
+  padding: 30px;
   font-size: 30px;
-  text-align: center;
 }
