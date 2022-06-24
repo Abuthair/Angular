@@ -1,0 +1,12 @@
+button:hover {
+  background-color: rgba(240, 11, 49, 0.459);
+}
+h2 {
+  text-align: center;
+}
+.body {
+  justify-content: center;
+  display: flex;
+  align-content: center;
+  padding-top: 120px;
+}

@@ -14,6 +14,7 @@ import { AuthModule } from './modules/auth/auth.module';
 import { PlayerModule } from './modules/player/player.module';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ContactsoonComponent } from './components/contactsoon/contactsoon.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     AboutComponent,
     ContactusComponent,
     PagenotfoundComponent,
+    ContactsoonComponent,
   ],
   imports: [
     BrowserModule,

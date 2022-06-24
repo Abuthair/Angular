@@ -34,7 +34,8 @@ export class SigningComponent implements OnInit {
   addSigning = (addform: FormGroup) => {
     let signing = addform.value;
     this._signingService.addSigning(signing, this.playerId).subscribe({
-      next: (data) => (this.signingDetails = data),
+      next: (data) => (console.log(data))
     });
+    addform.reset();
   };
 }

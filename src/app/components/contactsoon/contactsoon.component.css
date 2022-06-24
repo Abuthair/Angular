@@ -1,0 +1,9 @@
+img {
+    padding-left: 300px;
+    padding-top: 100px;
+  }
+  .body {
+    background-color: blanchedalmond;
+    background-size: 5%;
+    background-image: url(/assets/images/web/Logo.png);
+  }
