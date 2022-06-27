@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { map } from 'rxjs-compat/operator/map';
 import { Signing } from 'src/app/models/signing';
 import { SigningService } from '../../service/signing.service';
@@ -17,25 +17,25 @@ export class SigningComponent implements OnInit {
     private _signingService: SigningService
   ) {}
   signingDetails!: Signing;
-  addForm!:FormGroup
+  addForm!: FormGroup;
   ngOnInit(): void {
     this._activatedRoute.paramMap.subscribe((map) => {
       let plrId = map.get('id');
       if (plrId) this.playerId = parseInt(plrId);
     });
-    this.addForm= new FormGroup({
-    teamId: new FormControl('',[Validators.required]),
-    price: new FormControl('',[Validators.required]),
-    season: new FormControl('',[Validators.required]),
-   
-
-    })
+    this.addForm = new FormGroup({
+      teamId: new FormControl('', [Validators.required]),
+      price: new FormControl('', [Validators.required]),
+      season: new FormControl('', [Validators.required]),
+    });
   }
   addSigning = (addform: FormGroup) => {
     let signing = addform.value;
     this._signingService.addSigning(signing, this.playerId).subscribe({
-      next: (data) => (console.log(data))
+      next: (data) => console.log(data),
     });
-    addform.reset();
   };
+  // showSigning = (Signing: any) => {
+  //   this._router.navigate(['show-signing', Signing]);
+  // };
 }

@@ -9,9 +9,16 @@ import { Signing } from 'src/app/models/signing';
 })
 export class SigningService {
   private _baseurl = 'http://localhost:8123/signing-api/signings';
-  constructor(private _httpClient: HttpClient,private_activatedRoute: ActivatedRoute) {}
-  addSigning =(signing:Signing,playerId:number): Observable<void> => {
-    let url= `${this._baseurl}/player-id/${playerId}`;
-    return this._httpClient.post<void>(url,signing);
-  }
+  constructor(
+    private _httpClient: HttpClient,
+    private_activatedRoute: ActivatedRoute
+  ) {}
+  addSigning = (signing: Signing, playerId: number): Observable<void> => {
+    let url = `${this._baseurl}/player-id/${playerId}`;
+    return this._httpClient.post<void>(url, signing);
+  };
+
+  getSigning = (): Observable<Signing[]> => {
+    return this._httpClient.get<Signing[]>(this._baseurl);
+  };
 }

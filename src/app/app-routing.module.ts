@@ -9,6 +9,7 @@ import { LoginComponent } from './modules/auth/login/login.component';
 import { AuthserviceService } from './modules/auth/service/authservice.service';
 import { PlayerDetailsComponent } from './modules/player/components/player-details/player-details.component';
 import { PlayerListComponent } from './modules/player/components/player-list/player-list.component';
+import { ShowSigningComponent } from './modules/player/components/show-signing/show-signing.component';
 import { SigningComponent } from './modules/player/components/signing/signing.component';
 
 const routes: Routes = [

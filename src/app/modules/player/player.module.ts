@@ -6,21 +6,16 @@ import { MaterialModule } from '../shared/material/material.module';
 import { RouterModule } from '@angular/router';
 import { SigningComponent } from './components/signing/signing.component';
 import { ReactiveFormsModule } from '@angular/forms';
-
-
+import { ShowSigningComponent } from './components/show-signing/show-signing.component';
 
 @NgModule({
   declarations: [
     PlayerDetailsComponent,
     PlayerListComponent,
-    SigningComponent
+    SigningComponent,
+    ShowSigningComponent,
   ],
-  imports: [
-    CommonModule,
-    MaterialModule,
-    ReactiveFormsModule,
-    RouterModule,
-  ],
-  exports:[PlayerListComponent, PlayerDetailsComponent]
+  imports: [CommonModule, MaterialModule, ReactiveFormsModule, RouterModule],
+  exports: [PlayerListComponent, PlayerDetailsComponent],
 })
-export class PlayerModule { }
+export class PlayerModule {}

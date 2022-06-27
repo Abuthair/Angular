@@ -18,7 +18,9 @@ export class PlayerDetailsComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this._activatedRoute.paramMap.subscribe((map) => {
+    this._activatedRoute.paramMap.
+    
+    subscribe((map) => {
       let playId = map.get('id');
       if (playId) this.playerId = Number(playId);
       this._playerService.getPlayerById(this.playerId).subscribe({
