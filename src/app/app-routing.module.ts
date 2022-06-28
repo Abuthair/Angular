@@ -33,6 +33,7 @@ const routes: Routes = [
     component: ContactusComponent,
   },
   { path: 'contactsoon', component: ContactsoonComponent },
+  {path: 'show-signing', component: ShowSigningComponent},
 
   { path: 'login', component: LoginComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' },

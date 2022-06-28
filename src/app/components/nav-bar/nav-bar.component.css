@@ -4,10 +4,15 @@
 }
 .example-spacer {
   flex: 1 1 auto;
+
+  justify-content: space-between;
 }
 button {
   margin: 25px;
 }
 .signup {
   border-radius: 8px;
+}
+.sec2 {
+  background-color: rgba(137, 186, 214, 0.836);
 }

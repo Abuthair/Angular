@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { map } from 'rxjs-compat/operator/map';
 import { Signing } from 'src/app/models/signing';
 import { SigningService } from '../../service/signing.service';
 
@@ -35,7 +34,4 @@ export class SigningComponent implements OnInit {
       next: (data) => console.log(data),
     });
   };
-  // showSigning = (Signing: any) => {
-  //   this._router.navigate(['show-signing', Signing]);
-  // };
 }
