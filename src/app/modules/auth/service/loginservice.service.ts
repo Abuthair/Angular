@@ -1,10 +1,29 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
+import { Roles } from 'src/app/models/roles';
+import { User } from 'src/app/models/user';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class LoginserviceService {
+  // private user: User | undefined;
+  // users: User[] = [
+  //   {
+  //     username: 'u1',
+  //     password: 'root',
+  //     roles: [Roles.ADMIN, Roles.USER],
+  //   },
+  // ];
+  // login(username: string) {
+  //   const user = this.users.find((user) => user.username === username);
+  //   this.user = user;
+  //   return !!user;
+  // }
+
+  // getUser() {
+  //   return this.user;
+  // }
   isLoggedIn!: boolean;
   constructor() {
     this.isLoggedIn = false;

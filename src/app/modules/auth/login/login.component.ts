@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 import { User } from 'src/app/models/user';
 import { LoginserviceService } from '../service/loginservice.service';
 
@@ -20,7 +20,7 @@ export class LoginComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this._activatedRoute.queryParamMap.subscribe((map) => {
+    this._activatedRoute.queryParamMap.subscribe((map: ParamMap) => {
       let url = map.get('returnUrl');
       if (url) this.retUrl = url;
     });

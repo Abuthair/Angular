@@ -5,6 +5,7 @@ import { ContactsoonComponent } from './components/contactsoon/contactsoon.compo
 import { ContactusComponent } from './components/contactus/contactus.component';
 import { HomeComponent } from './components/home/home.component';
 import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.component';
+import { Roles } from './models/roles';
 import { LoginComponent } from './modules/auth/login/login.component';
 import { AuthserviceService } from './modules/auth/service/authservice.service';
 import { PlayerDetailsComponent } from './modules/player/components/player-details/player-details.component';
@@ -18,6 +19,9 @@ const routes: Routes = [
     path: 'player-list',
     component: PlayerListComponent,
     canActivate: [AuthserviceService],
+    data: {
+      roles: [Roles.ADMIN],
+    },
   },
   { path: 'player-list/:type', component: PlayerListComponent },
   { path: 'player-details/:id', component: PlayerDetailsComponent },
@@ -33,7 +37,7 @@ const routes: Routes = [
     component: ContactusComponent,
   },
   { path: 'contactsoon', component: ContactsoonComponent },
-  {path: 'show-signing', component: ShowSigningComponent},
+  { path: 'show-signing', component: ShowSigningComponent },
 
   { path: 'login', component: LoginComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' },

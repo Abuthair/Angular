@@ -1,9 +1,12 @@
+import { Player } from './player';
+import { Team } from './team';
+
 export class Signing {
-constructor(
-    signingId:number,
-    price:number,
-    teamId:string,
-    playerId:string,
-    season:string,
-){}
+  constructor(
+    public signingId: number,
+    public price: number,
+    public teamId: number,
+    public player: Player,
+    public season: string
+  ) {}
 }

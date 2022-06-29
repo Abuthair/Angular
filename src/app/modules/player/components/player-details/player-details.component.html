@@ -1,5 +1,7 @@
 <!-- {{player| json}} -->
-<div class="grid-container">
+<div class="grid-container" *ngIf="player">
+  <mat-icon button onclick="history.back()">keyboard_backspace</mat-icon>
+
   <div class="grid-item">
     <div class="fut-player-card">
       <!-- Player Card Top-->
@@ -72,15 +74,12 @@
       {{ player.playerDescription }}
     </div>
     <button
+      class="submit-button"
       mat-raised-button
       [routerLink]="['/signing', player.playerId]"
       color="primary"
     >
       Signing
-    </button>
-    
-    <button mat-raised-button onclick="history.back()" color="primary">
-      Back
     </button>
   </div>
 </div>

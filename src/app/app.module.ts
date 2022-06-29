@@ -32,7 +32,6 @@ import { ContactsoonComponent } from './components/contactsoon/contactsoon.compo
     BrowserAnimationsModule,
     HttpClientModule,
     PlayerModule,
-    AuthModule,
     MaterialModule,
     ReactiveFormsModule,
     AppRoutingModule,
